@@ -40,4 +40,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    val room_version = "2.6.1" // Versão estável atual
+
+    implementation("androidx.room:room-runtime:$room_version")
+
+    // ATENÇÃO: O annotationProcessor é obrigatório porque o projeto é em Java!
+    annotationProcessor("androidx.room:room-compiler:$room_version")
 }
